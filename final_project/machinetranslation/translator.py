@@ -23,10 +23,14 @@ language_translator.set_service_url(url)
 
 def english_to_french(english_text):
     '''English to French'''
-    french_text = language_translator.translate(text=english_text, model_id='en-fr').get_result()
+    if english_text != None:
+        french_text = language_translator.translate(text=english_text, model_id='en-fr').get_result()
+    else: french_text = None
     return french_text
 
 def french_to_english(french_text):
     '''French to English'''
-    english_text = language_translator.translate(text=french_text, model_id='fr-en').get_result()
+    if french_text != None:
+        english_text = language_translator.translate(text=french_text, model_id='fr-en').get_result()
+    else: english_text = None
     return english_text
