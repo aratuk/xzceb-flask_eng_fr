@@ -8,7 +8,7 @@ class test_e2f_translator(unittest.TestCase):
         self.assertEqual(english_to_french('Hello')['translations'][0]['translation'], 'Bonjour')
     #Test null
     def test_e2f_null(self):
-        self.assertNotEqual(english_to_french('Null'), '')
+        self.assertNotEqual(english_to_french(Null), '')
     
 #French to English
 class test_f2e_translator(unittest.TestCase):
@@ -17,7 +17,7 @@ class test_f2e_translator(unittest.TestCase):
         self.assertEqual(french_to_english('Bonjour')['translations'][0]['translation'], 'Hello')
     #Test null
     def test_f2e_null(self):
-        self.assertNotEqual(french_to_english('Null'), '')
+        self.assertNotEqual(french_to_english(Null), '')
 
 
 if __name__ == "__main__":
